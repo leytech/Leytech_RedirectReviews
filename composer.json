@@ -1,0 +1,13 @@
+{
+  "name": "leytech/leytech_redirectreviews",
+  "type": "magento-module",
+  "description": "Module to redirect the standard product reviews list and individual review views to the product page.",
+  "homepage": "https://github.com/leytech/Leytech_RedirectReviews",
+  "require": {
+    "php": ">=5.4.0",
+    "magento-hackathon/magento-composer-installer": "*"
+  },
+  "extra":{
+    "magento-root-dir": "src/"
+  }
+}
