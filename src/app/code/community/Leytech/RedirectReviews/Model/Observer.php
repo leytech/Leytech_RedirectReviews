@@ -2,7 +2,7 @@
 /**
  * @package    Leytech_RedirectReviews
  * @author     Chris Nolan (chris@leytech.co.uk)
- * @copyright  Copyright (c) 2017 Leytech
+ * @copyright  Copyright (c) 2018 Leytech
  * @license    https://opensource.org/licenses/MIT  The MIT License  (MIT)
  */
 
