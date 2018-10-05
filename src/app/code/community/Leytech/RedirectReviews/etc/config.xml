@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @package    Leytech_RedirectReviews
+ * @author     Chris Nolan (chris@leytech.co.uk)
+ * @copyright  Copyright (c) 2017 Leytech
+ * @license    https://opensource.org/licenses/MIT  The MIT License  (MIT)
+ */
+-->
+<config>
+    <modules>
+        <Leytech_RedirectReviews>
+            <version>1.0.0</version>
+        </Leytech_RedirectReviews>
+    </modules>
+    <global>
+        <blocks>
+            <leytech_redirectreviews>
+                <class>Leytech_RedirectReviews_Block</class>
+            </leytech_redirectreviews>
+        </blocks>
+        <models>
+            <leytech_redirectreviews>
+                <class>Leytech_RedirectReviews_Model</class>
+            </leytech_redirectreviews>
+        </models>
+        <helpers>
+            <leytech_redirectreviews>
+                <class>Leytech_RedirectReviews_Helper</class>
+            </leytech_redirectreviews>
+        </helpers>
+    </global>
+    <frontend>
+        <events>
+            <controller_action_predispatch_review_product_list>
+                <observers>
+                    <leytech_redirectreviews_review_product_list_observer>
+                        <class>Leytech_RedirectReviews_Model_Observer</class>
+                        <method>redirectReviewListToProduct</method>
+                    </leytech_redirectreviews_review_product_list_observer>
+                </observers>
+            </controller_action_predispatch_review_product_list>
+            <controller_action_predispatch_review_product_view>
+                <observers>
+                    <leytech_redirectreviews_review_product_view_observer>
+                        <class>Leytech_RedirectReviews_Model_Observer</class>
+                        <method>redirectReviewViewToProduct</method>
+                    </leytech_redirectreviews_review_product_view_observer>
+                </observers>
+            </controller_action_predispatch_review_product_view>
+        </events>
+    </frontend>
+    <default>
+        <leytech_redirectreviews>
+            <settings>
+                <enabled>0</enabled>
+                <redirect_list>0</redirect_list>
+                <redirect_view>0</redirect_view>
+            </settings>
+        </leytech_redirectreviews>
+    </default>
+</config>
